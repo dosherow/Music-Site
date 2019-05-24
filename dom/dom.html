@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom manipulation</title>
+  <meta name="description" content="Studio Page 1030 Tuwop Gallery">
+  <meta name="keywords" content="1030 Tuwop, Tuwop, Rap, Hip Hop, Studio, Music">
+  <link rel="stylesheet" href="css/dom.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="js.js"></script>
+	<script src="script.js"></script>
+  <script src="js2.js"></script>
+</head>
+
+
+
+<body>
+
+  <header class="header">
+  <div class="header-inner" id="desktop">
+    <a href="../indexglitch.html">Home</a>
+    <a href="../dom/dom.html">Studio</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+</header>
+
+<div class="popup">
+          Explore Your Keyboard & Turn On Sound
+          <br>
+          <img class="keyboard" src="keyboard.png"> 
+</div> 
+
+  <div class="container">
+    <div class="imgs" id="imgArray"></div>
+   <div class="hero-text">Studio</div>
+ </div>
+
+
+
+
+        <audio data-key="113" id="Q" class="clip" src="gang.wav" preload="auto"></audio>
+  			<audio data-key="119" id="W" class="clip" src="2.wav" preload="auto"></audio>
+        <audio data-key="101" id="E" class="clip" src="3.wav" preload="auto"></audio>
+      	<audio data-key="97" id="A"  class="clip" src="gang2.wav" preload="auto"></audio>
+      	<audio data-key="115" id="S" class="clip" src="5.wav" preload="auto"></audio>
+     		<audio data-key="100" id="D" class="clip" src="6.wav" preload="auto"></audio>
+       	<audio data-key="122" id="Z" class="clip" src="7.wav" preload="auto"></audio>
+      	<audio data-key="120" id="X" class="clip" src="8.wav" preload="auto"></audio>
+      	<audio data-key="99" class="clip" id="C" src="9.wav" preload="auto"></audio>
+      	<audio data-key="32" class="clip" id="Space" src="10.wav" preload="auto"></audio>
+       	<audio data-key="102" class="clip" id="F" src="11.wav" preload="auto"></audio>         
+
+
+
+
+  <script>
+
+      document.querySelector("body").onclick = function() {
+      document.querySelector(".popup").style.display = "none";
+      document.querySelector(".hero-text").style.display = "block";
+    }
+   </script> 
+
+
+
+</body>
+</html>

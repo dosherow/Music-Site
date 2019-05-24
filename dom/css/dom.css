@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #2f005b;
+}
+
+.container {
+  max-width: 100%;
+  height: 600px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-text {
+  display: none;
+  animation: 1.2s ease-in-out 0s 1 hero-text;
+  position: relative;
+  text-align: center;
+  font-family: "Avenir";
+  color: #5600a8;
+  text-shadow: 0 1px 0 #4f0099, 0 2px 0 #4c0094, 0 3px 0 #4a008f, 0 4px 0 #450085, 0 5px 0 #3f007a, 0 6px 0 #3a0070, 0 7px 0 #350066, 0 8px 0 #2f005c, 0 9px 0 #28004d, 0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+  font-size: 180px;
+  font-weight: 900;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  margin: 0 auto;
+  width: 100%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  z-index: -2;
+}
+
+.imgs {
+  position: absolute;
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
+  max-width: 300px;
+  z-index: -99;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+    transform: translateY(300px);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.footer {
+  display: flex;
+  font-family: 'Futura', sans-serif;
+  color: #5600a8;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  font-size: 12px;
+  z-index: -1;
+}
+
+.header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #2f005b;
+  transition: background .4s ease-in;
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 20px;
+  z-index: -1;
+}
+
+.header-inner a {
+  animation: 1.8s ease-out 0s 1 slide1;
+}
+
+.header-inner a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #e1d7ed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding: 10px;
+  font-family: "Avenir";
+}
+
+.keyboard {
+  width: 60%;
+}
+
+.header-inner a:hover {
+  color: #5600a8;
+  letter-spacing: 5px;
+}
+
+.header-inner a {
+  transition: all 0.6s;
+}
+
+.popup {
+  position: relative;
+  animation: 1.8s ease-in-out 0s 1 appear;
+  display: block;
+  font-family: "Avenir";
+  background-color: white;
+  color: #5600a8;
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  border-radius: 6px;
+}
+
+@keyframes hero-text {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popup {
+    width: 70%;
+    margin-top: 160px;
+    padding: 20px;
+  }
+  .keyboard {
+    width: 40%;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  .images {
+    max-width: 100px;
+  }
+  .hero-text {
+    font-size: 80px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .popup {
+    width: 60%;
+    margin-top: 140px;
+    padding: 50px;
+  }
+  h1 {
+    font-size: 180px;
+  }
+  .keyboard {
+    width: 40%;
+  }
+  .images {
+    max-width: 200px;
+  }
+  max-width: 992px;
+}
+
+@media screen and (min-width: 993px) {
+  .popup {
+    width: 50%;
+    margin-top: 80px;
+    padding: 30px;
+  }
+  .keyboard {
+    width: 80%;
+  }
+  h1 {
+    font-size: 220px;
+  }
+}
